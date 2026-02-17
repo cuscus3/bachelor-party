@@ -194,13 +194,17 @@
   }
 
   /* Property Info */
+  .property-thumbnails {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
   .property-thumbnail {
-    display: inline-block;
+    display: block;
     width: 140px;
     height: 100px;
     border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 16px;
   }
   .property-thumbnail img {
     width: 100%;
@@ -524,9 +528,14 @@
         <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
       </div>
       <div class="section-content">
-        <a href="https://www.airbnb.com/rooms/1406052317030310598" target="_blank" class="property-thumbnail">
-          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1406052317030310598/original/0decbb9c-5e03-4cd5-bc46-a464e9e58a38.jpeg?im_w=1200" alt="Oasis on the Lake">
-        </a>
+        <div class="property-thumbnails">
+          <a href="https://www.airbnb.com/rooms/1406052317030310598" target="_blank" class="property-thumbnail">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1406052317030310598/original/0decbb9c-5e03-4cd5-bc46-a464e9e58a38.jpeg?im_w=1200" alt="Oasis on the Lake">
+          </a>
+          <a href="https://www.airbnb.com/rooms/1406052317030310598" target="_blank" class="property-thumbnail">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1406052317030310598/original/8f67e242-eaf2-47d3-911c-1dd6dc6ca897.jpeg?im_w=1440" alt="Oasis on the Lake">
+          </a>
+        </div>
         <div class="property-header">
           <div>
             <div class="property-name">Oasis on the Lake</div>
@@ -725,3 +734,4 @@ function toggleDay(id) {
 
 </body>
 </html>
+New task - Claude
