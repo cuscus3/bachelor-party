@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryan's Bachelor Party 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f8fafc;
+      min-height: 100vh;
+      color: #1e293b;
+      padding: 24px;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 540px;
+      margin: 0 auto;
+    }
+    .header {
+      text-align: center;
+      padding: 48px 24px;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      border-radius: 24px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%);
+    }
+    .header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 8px;
+      position: relative;
+    }
+    .header .subtitle {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #60a5fa;
+      margin-bottom: 4px;
+    }
+    .header .dates {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+      border: 1px solid #e2e8f0;
+    }
+    .card h2 {
+      color: #0f172a;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card h2 .icon {
+      font-size: 1.1rem;
+    }
+    .property-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+    .property-location {
+      color: #64748b;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .info-item {
+      background: #f8fafc;
+      padding: 14px;
+      border-radius: 12px;
+    }
+    .info-item .label {
+      font-size: 0.7rem;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+    .info-item .value {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin-top: 4px;
+    }
+    .bonus-box {
+      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 16px;
+      border: 1px solid #a7f3d0;
+    }
+    .bonus-box h3 {
+      color: #065f46;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: 8px;
+    }
+    .bonus-box p {
+      color: #047857;
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+    .bonus-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .bonus-list li {
+      background: #fff;
+      color: #065f46;
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 1px solid #a7f3d0;
+    }
+    .amenities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .amenity {
+      background: #f1f5f9;
+      color: #475569;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .day {
+      margin-bottom: 24px;
+    }
+    .day:last-child {
+      margin-bottom: 0;
+    }
+    .day-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .day-badge {
+      background: #0f172a;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+    .day-date {
+      color: #64748b;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .activities {
+      margin-left: 6px;
+      border-left: 2px solid #e2e8f0;
+      padding-left: 16px;
+    }
+    .activity {
+      padding: 10px 0;
+      position: relative;
+    }
+    .activity::before {
+      content: '';
+      position: absolute;
+      left: -21px;
+      top: 14px;
+      width: 8px;
+      height: 8px;
+      background: #3b82f6;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+    .activity .time {
+      color: #3b82f6;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .activity .desc {
+      color: #0f172a;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .activity .note {
+      color: #64748b;
+      font-size: 0.85rem;
+      margin-top: 2px;
+    }
+    .packing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .packing-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 0;
+      font-size: 0.9rem;
+      color: #475569;
+    }
+    .packing-item .check {
+      width: 18px;
+      height: 18px;
+      border: 2px solid #cbd5e1;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .cta {
+      text-align: center;
+      padding: 32px 24px;
+      background: #fff;
+      border-radius: 16px;
+      border: 2px dashed #e2e8f0;
+      margin-bottom: 16px;
+    }
+    .cta h3 {
+      color: #0f172a;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .cta .price {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #3b82f6;
+      margin-bottom: 8px;
+    }
+    .cta .price span {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #64748b;
+    }
+    .cta .note {
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+    .footer {
+      text-align: center;
+      padding: 24px;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+    .footer .emoji {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+    .footer p {
+      margin-bottom: 4px;
+    }
+    .footer .flights {
+      color: #94a3b8;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>RYAN'S BACHELOR PARTY</h1>
+      <div class="subtitle">Lake Lanier Weekend</div>
+      <div class="dates">May 28 – 31, 2026</div>
+    </div>
+    <div class="card">
+      <h2><span class="icon">🏠</span> The Property</h2>
+      <div class="property-name">Oasis on the Lake</div>
+      <div class="property-location">Lake Lanier, Georgia</div>
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="label">Bedrooms</div>
+          <div class="value">7 BR / 7 BA</div>
+        </div>
+        <div class="info-item">
+          <div class="label">Guests</div>
+          <div class="value">16 people</div>
+        </div>
+        <div class="info-item">
+          <div class="label">Check In</div>
+          <div class="value">Thu, May 28</div>
+        </div>
+        <div class="info-item">
+          <div class="label">Check Out</div>
+          <div class="value">Sun, May 31</div>
+        </div>
+      </div>
+      <div class="bonus-box">
+        <h3>✨ Petree House Access</h3>
+        <p>Right around the corner — we've got access to:</p>
+        <ul class="bonus-list">
+          <li>🚤 Boats</li>
+          <li>🛟 Floaties</li>
+          <li>⛳ Lake Lanier Islands Golf</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <h2><span class="icon">✨</span> Amenities</h2>
+      <div class="amenities">
+        <span class="amenity">🏊 Pool</span>
+        <span class="amenity">🚤 Waterfront</span>
+        <span class="amenity">🛥️ Boat Dock</span>
+        <span class="amenity">🛶 Kayaks</span>
+        <span class="amenity">🎱 Game Room</span>
+        <span class="amenity">🔥 Fire Pit</span>
+        <span class="amenity">🍳 Full Kitchen</span>
+        <span class="amenity">📺 Smart TVs</span>
+      </div>
+    </div>
+    <div class="card">
+      <h2><span class="icon">📅</span> The Itinerary</h2>
+      <div class="day">
+        <div class="day-header">
+          <span class="day-badge">DAY 1</span>
+          <span class="day-date">Thursday, May 28</span>
+        </div>
+        <div class="activities">
+          <div class="activity">
+            <div class="time">3:00 PM</div>
+            <div class="desc">Check-in & settle in</div>
+            <div class="note">Claim rooms, explore the property</div>
+          </div>
+          <div class="activity">
+            <div class="time">5:00 PM</div>
+            <div class="desc">Pool & lake time</div>
+            <div class="note">First beers, floaties at the Petree house</div>
+          </div>
+          <div class="activity">
+            <div class="time">7:00 PM</div>
+            <div class="desc">Grill out</div>
+            <div class="note">Steaks, burgers, brats</div>
+          </div>
+          <div class="activity">
+            <div class="time">9:00 PM</div>
+            <div class="desc">Fire pit & games</div>
+            <div class="note">Poker, drinking games</div>
+          </div>
+        </div>
+      </div>
+      <div class="day">
+        <div class="day-header">
+          <span class="day-badge">DAY 2</span>
+          <span class="day-date">Friday, May 29</span>
+        </div>
+        <div class="activities">
+          <div class="activity">
+            <div class="time">9:00 AM</div>
+            <div class="desc">Breakfast & coffee</div>
+          </div>
+          <div class="activity">
+            <div class="time">10:30 AM</div>
+            <div class="desc">Boat day at Petree's</div>
+            <div class="note">Tubing, wakeboarding, lake cruising</div>
+          </div>
+          <div class="activity">
+            <div class="time">2:00 PM</div>
+            <div class="desc">Chill time</div>
+          </div>
+          <div class="activity">
+            <div class="time">5:00 PM</div>
+            <div class="desc">Tournament time</div>
+            <div class="note">Bags, beer pong, etc.</div>
+          </div>
+          <div class="activity">
+            <div class="time">8:00 PM</div>
+            <div class="desc">Dinner & poker night</div>
+          </div>
+        </div>
+      </div>
+      <div class="day">
+        <div class="day-header">
+          <span class="day-badge">DAY 3</span>
+          <span class="day-date">Saturday, May 30</span>
+        </div>
+        <div class="activities">
+          <div class="activity">
+            <div class="time">8:00 AM</div>
+            <div class="desc">Golf at Lake Lanier Islands</div>
+            <div class="note">Tee time for the golfers</div>
+          </div>
+          <div class="activity">
+            <div class="time">12:00 PM</div>
+            <div class="desc">Brunch</div>
+            <div class="note">Bloody marys & breakfast burritos</div>
+          </div>
+          <div class="activity">
+            <div class="time">2:00 PM</div>
+            <div class="desc">Lake time round 2</div>
+            <div class="note">More boat, more floaties</div>
+          </div>
+          <div class="activity">
+            <div class="time">6:00 PM</div>
+            <div class="desc">Ryan's last supper</div>
+            <div class="note">Big dinner, speeches, toasts</div>
+          </div>
+          <div class="activity">
+            <div class="time">9:00 PM</div>
+            <div class="desc">Final night celebration</div>
+          </div>
+        </div>
+      </div>
+      <div class="day">
+        <div class="day-header">
+          <span class="day-badge">DAY 4</span>
+          <span class="day-date">Sunday, May 31</span>
+        </div>
+        <div class="activities">
+          <div class="activity">
+            <div class="time">10:00 AM</div>
+            <div class="desc">Pack up & clean</div>
+          </div>
+          <div class="activity">
+            <div class="time">11:00 AM</div>
+            <div class="desc">Check out</div>
+            <div class="note">Safe travels home!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h2><span class="icon">🎒</span> What to Bring</h2>
+      <div class="packing-grid">
+        <div class="packing-item"><span class="check"></span> Swimsuit</div>
+        <div class="packing-item"><span class="check"></span> Sunscreen</div>
+        <div class="packing-item"><span class="check"></span> Sunglasses</div>
+        <div class="packing-item"><span class="check"></span> Casual clothes</div>
+        <div class="packing-item"><span class="check"></span> Golf attire & clubs</div>
+        <div class="packing-item"><span class="check"></span> Shower stuff</div>
+        <div class="packing-item"><span class="check"></span> Phone charger</div>
+        <div class="packing-item"><span class="check"></span> Cash</div>
+        <div class="packing-item"><span class="check"></span> Drinking games</div>
+        <div class="packing-item"><span class="check"></span> Good vibes only</div>
+      </div>
+    </div>
+    <div class="cta">
+      <h3>Estimated Cost</h3>
+      <div class="price">~$357 <span>/ person</span></div>
+      <div class="note">Final price depends on headcount. No payment needed yet — we'll sort it out in the group chat once we know who's in.</div>
+    </div>
+    <div class="footer">
+      <div class="emoji">🍻</div>
+      <p><strong>Let's send Ryan off in style!</strong></p>
+      <p>Confirm in the group chat if you can make it</p>
+      <p class="flights">Book your flights to ATL</p>
+    </div>
+  </div>
+</body>
+</html>
