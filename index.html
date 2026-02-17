@@ -1,6 +1,4 @@
-
-Index · HTML
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -29,9 +27,17 @@ Index · HTML
   .hero {
     position: relative;
     padding: 60px 24px 40px;
-    background: linear-gradient(135deg, #0f1923 0%, #1a3a4a 50%, #1e3d30 100%);
+    background: linear-gradient(to bottom, rgba(15,25,35,0.4) 0%, rgba(15,25,35,0.7) 50%, rgba(15,25,35,0.95) 100%),
+                url('https://lh3.googleusercontent.com/gps-cs-s/AHVAweqTOeStii-jfXBngGUr3xWBfkLGDVMEss9o6pEHQAo-M1uGtWrvI6qW9bowdtwYy7Ohxf3vZwL7pp0RTB5Qd0EZ52sZH1WfqnSdUNsns8lgmemzrpjl-h0q3RosEKUwhSKVjGI6lq3ot3oT=w1600-h900') center/cover no-repeat;
     overflow: hidden;
     text-align: center;
+  }
+  .hero-dates {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #c4956a;
+    margin-bottom: 4px;
   }
   .hero::before {
     content: '';
@@ -189,11 +195,12 @@ Index · HTML
 
   /* Property Info */
   .property-thumbnail {
-    width: 100%;
-    height: 200px;
-    border-radius: 10px;
+    display: inline-block;
+    width: 140px;
+    height: 100px;
+    border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
   .property-thumbnail img {
     width: 100%;
@@ -202,7 +209,7 @@ Index · HTML
     transition: transform 0.3s ease;
   }
   .property-thumbnail:hover img {
-    transform: scale(1.03);
+    transform: scale(1.05);
   }
   .property-header {
     display: flex;
@@ -465,6 +472,7 @@ Index · HTML
 <div class="hero">
   <div class="hero-label">Lake Lanier, Georgia</div>
   <h1>Ryan's Bachelor Party</h1>
+  <div class="hero-dates">Thursday – Sunday</div>
   <div class="hero-sub">May 28 – 31, 2026</div>
   <div class="stats-row">
     <div class="stat-card">
