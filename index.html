@@ -6,9 +6,7 @@
 <title>Ryan's Bachelor Party 2026</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   body {
     font-family: 'DM Sans', sans-serif;
     background: #0f1923;
@@ -16,13 +14,11 @@
     min-height: 100vh;
     line-height: 1.6;
   }
-
   .container {
     max-width: 900px;
     margin: 0 auto;
     padding: 0 24px;
   }
-
   /* Hero */
   .hero {
     position: relative;
@@ -72,7 +68,6 @@
     color: #8a9bae;
     margin-bottom: 24px;
   }
-
   /* Quick Stats */
   .stats-row {
     display: flex;
@@ -93,10 +88,8 @@
   }
   .stat-card .label { font-size: 10px; color: #6b7d8e; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 4px; }
   .stat-card .value { font-size: 20px; font-weight: 700; color: #f5e6d3; }
-
   /* Content */
   .content { padding: 32px 0 60px; }
-
   /* Section Cards */
   .section {
     background: rgba(255,255,255,0.03);
@@ -143,7 +136,6 @@
   .section-content {
     padding: 0 24px 24px;
   }
-
   /* Flight Info */
   .flight-box {
     display: flex;
@@ -167,7 +159,6 @@
   .airport-name { font-size: 14px; color: #e8e6e1; font-weight: 500; }
   .drive-time { font-size: 13px; color: #6b7d8e; margin-top: 4px; }
   .drive-time strong { color: #c4956a; }
-
   /* Coordination Box */
   .coord-box {
     background: rgba(196,149,106,0.08);
@@ -194,7 +185,6 @@
     font-size: 13px;
     color: #e8e6e1;
   }
-
   /* Property Info */
   .property-thumbnails {
     display: flex;
@@ -245,7 +235,6 @@
     transition: transform 0.15s;
   }
   .view-btn:hover { transform: translateY(-1px); }
-
   /* Info Grid */
   .info-grid {
     display: grid;
@@ -260,7 +249,6 @@
   }
   .info-card .label { font-size: 10px; color: #6b7d8e; text-transform: uppercase; letter-spacing: 1px; }
   .info-card .value { font-size: 16px; font-weight: 600; color: #e8e6e1; margin-top: 4px; }
-
   /* Perks Box */
   .perks-box {
     background: rgba(196,149,106,0.06);
@@ -278,7 +266,6 @@
     border-radius: 20px;
     font-size: 13px;
   }
-
   /* Amenities */
   .amenities-grid {
     display: flex;
@@ -292,7 +279,6 @@
     font-size: 13px;
     color: #8a9bae;
   }
-
   /* Golf */
   .golf-info { font-size: 14px; color: #8a9bae; margin-bottom: 16px; }
   .golf-info strong { color: #c4956a; }
@@ -317,7 +303,32 @@
     margin-left: 8px;
     letter-spacing: 0.5px;
   }
+  .locked-tag {
+    font-size: 9px;
+    background: #2d5a27;
+    color: #f5e6d3;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 700;
+    margin-left: 8px;
+    letter-spacing: 0.5px;
+  }
   .golf-cost .amount { font-size: 18px; font-weight: 700; color: #f5e6d3; }
+  .golf-includes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .golf-includes li {
+    list-style: none;
+    background: rgba(45,90,39,0.15);
+    border: 1px solid rgba(45,90,39,0.3);
+    color: #e8e6e1;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+  }
   .golf-link {
     display: flex;
     align-items: center;
@@ -333,7 +344,6 @@
   .golf-link .name { font-weight: 600; }
   .golf-link .badge { background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 4px; font-size: 11px; }
   .golf-note { font-size: 12px; color: #6b7d8e; text-align: center; margin-top: 14px; }
-
   /* Day Cards */
   .day {
     background: rgba(255,255,255,0.02);
@@ -365,7 +375,6 @@
   .day.collapsed .day-content { display: none; }
   .day.collapsed .chevron { transform: rotate(-90deg); }
   .day-content { padding: 0 20px 20px; }
-
   .activities {
     border-left: 2px solid rgba(196,149,106,0.3);
     margin-left: 8px;
@@ -389,7 +398,6 @@
   .activity .time { font-size: 12px; font-weight: 600; color: #c4956a; }
   .activity .desc { font-size: 15px; font-weight: 500; color: #e8e6e1; margin-top: 2px; }
   .activity .note { font-size: 13px; color: #6b7d8e; margin-top: 2px; }
-
   /* Packing Grid */
   .packing-grid {
     display: grid;
@@ -411,7 +419,6 @@
     border-radius: 4px;
     flex-shrink: 0;
   }
-
   /* Cost Grid */
   .cost-grid { display: flex; flex-direction: column; gap: 10px; }
   .cost-row {
@@ -442,7 +449,6 @@
     margin-top: 16px;
     text-align: center;
   }
-
   /* Footer */
   .footer {
     text-align: center;
@@ -461,7 +467,6 @@
     margin-bottom: 8px;
   }
   .footer p { font-size: 14px; color: #6b7d8e; }
-
   /* Responsive */
   @media (max-width: 600px) {
     .hero { padding: 40px 20px 30px; }
@@ -474,7 +479,6 @@
 </style>
 </head>
 <body>
-
 <div class="hero">
   <div class="hero-label">Lake Lanier, Georgia</div>
   <h1>Ryan's Bachelor Party</h1>
@@ -495,10 +499,8 @@
     </div>
   </div>
 </div>
-
 <div class="container">
   <div class="content">
-
     <div class="section" id="flights">
       <div class="section-header" onclick="toggle('flights')">
         <div class="section-title"><span class="icon">✈️</span> Getting There</div>
@@ -513,17 +515,16 @@
           </div>
         </div>
         <div class="coord-box">
-          <h4>Let's Coordinate</h4>
-          <p>Drop your flight times in the group chat so we can figure out rides & carpools.</p>
+          <h4>🚐 Airport Pickup — 15-Seat Van</h4>
+          <p>Rented a big van for anyone flying into ATL on <strong>Thursday, May 28 between 10:30 – 11:00 AM</strong>. Drop your flight info in the group chat so we can lock in the pickup.</p>
           <div class="coord-items">
             <div class="coord-item"><span>🛬</span> Share your arrival time</div>
-            <div class="coord-item"><span>🚙</span> Anyone renting a car?</div>
-            <div class="coord-item"><span>👥</span> We'll organize carpools</div>
+            <div class="coord-item"><span>🚐</span> Van seats 15 — first come, first served</div>
+            <div class="coord-item"><span>🚙</span> Outside the window? Coordinate carpools in the chat</div>
           </div>
         </div>
       </div>
     </div>
-
     <div class="section" id="property">
       <div class="section-header" onclick="toggle('property')">
         <div class="section-title"><span class="icon">🏠</span> The Property</div>
@@ -563,7 +564,6 @@
         </div>
       </div>
     </div>
-
     <div class="section" id="amenities">
       <div class="section-header" onclick="toggle('amenities')">
         <div class="section-title"><span class="icon">✨</span> Amenities</div>
@@ -582,33 +582,35 @@
         </div>
       </div>
     </div>
-
     <div class="section" id="golf">
       <div class="section-header" onclick="toggle('golf')">
-        <div class="section-title"><span class="icon">⛳</span> Golf (Optional)</div>
+        <div class="section-title"><span class="icon">⛳</span> Golf — Locked In</div>
         <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
       </div>
       <div class="section-content">
-        <p class="golf-info">There's a great course at Lake Lanier Islands — <strong>totally optional</strong>. Let us know in the group chat if you want in so we can get a headcount and book a tee time.</p>
+        <p class="golf-info">We're locked in for <strong>Saturday golf</strong> at Lake Lanier Islands. <strong>First tee time is 12:00 PM</strong>. Deposit is down — everyone pays separately at the course.</p>
         <div class="golf-cost">
-          <span class="label">Estimated cost<span class="optional-tag">OPTIONAL</span></span>
-          <span class="amount">$170–200/person</span>
+          <span class="label">Green fee<span class="locked-tag">CONFIRMED</span></span>
+          <span class="amount">$130/person</span>
         </div>
+        <ul class="golf-includes">
+          <li>🍔 All-you-can-eat lunch</li>
+          <li>🏌️ Range balls</li>
+          <li>⛳ 18 holes</li>
+        </ul>
         <a href="https://www.google.com/search?q=Lake+Lanier+Islands+Golf" target="_blank" class="golf-link">
           <span class="name">⛳ Lake Lanier Islands Golf</span>
           <span class="badge">VIEW →</span>
         </a>
-        <p class="golf-note">Don't feel pressured — plenty of lake time for non-golfers!</p>
+        <p class="golf-note">Not playing? No worries — plenty of lake time for non-golfers!</p>
       </div>
     </div>
-
     <div class="section" id="itinerary">
       <div class="section-header" onclick="toggle('itinerary')">
         <div class="section-title"><span class="icon">📅</span> The Itinerary</div>
         <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
       </div>
       <div class="section-content">
-
         <div class="day" id="day1">
           <div class="day-header" onclick="toggleDay('day1')">
             <div class="day-header-left">
@@ -619,6 +621,7 @@
           </div>
           <div class="day-content">
             <div class="activities">
+              <div class="activity"><div class="time">10:30 – 11:00 AM</div><div class="desc">🚐 Airport pickup — 15-seat van</div><div class="note">For anyone flying into ATL in this window</div></div>
               <div class="activity"><div class="time">3:00 PM</div><div class="desc">Check-in & settle in</div><div class="note">Claim rooms, explore the property</div></div>
               <div class="activity"><div class="time">5:00 PM</div><div class="desc">Pool & lake time</div><div class="note">First beers, floaties</div></div>
               <div class="activity"><div class="time">7:00 PM</div><div class="desc">Grill out or order food</div><div class="note">Steaks, burgers, brats</div></div>
@@ -626,7 +629,6 @@
             </div>
           </div>
         </div>
-
         <div class="day" id="day2">
           <div class="day-header" onclick="toggleDay('day2')">
             <div class="day-header-left">
@@ -645,7 +647,6 @@
             </div>
           </div>
         </div>
-
         <div class="day" id="day3">
           <div class="day-header" onclick="toggleDay('day3')">
             <div class="day-header-left">
@@ -656,15 +657,15 @@
           </div>
           <div class="day-content">
             <div class="activities">
-              <div class="activity"><div class="time">8:00 AM</div><div class="desc">Golf at Lake Lanier Islands</div><div class="note">Optional — $170–200/person</div></div>
-              <div class="activity"><div class="time">12:00 PM</div><div class="desc">Brunch at Pelican Pete's or Twisted Oar</div></div>
-              <div class="activity"><div class="time">2:00 PM</div><div class="desc">Lake time round 2</div><div class="note">More boat, more floaties</div></div>
-              <div class="activity"><div class="time">6:00 PM</div><div class="desc">Boat cruise & dinner at Pelican Pete's or Twisted Oar</div></div>
-              <div class="activity"><div class="time">9:00 PM</div><div class="desc">Final night celebration</div></div>
+              <div class="activity"><div class="time">9:00 AM</div><div class="desc">Breakfast at the house</div><div class="note">Carb up before the round</div></div>
+              <div class="activity"><div class="time">11:00 AM</div><div class="desc">Head to the course</div><div class="note">Range balls before tee time</div></div>
+              <div class="activity"><div class="time">12:00 PM</div><div class="desc">⛳ Golf — first tee time</div><div class="note">$130/person — includes all-you-can-eat lunch & range balls. Pay separately at the course.</div></div>
+              <div class="activity"><div class="time">5:00 PM</div><div class="desc">Lake time round 2</div><div class="note">More boat, more floaties</div></div>
+              <div class="activity"><div class="time">7:00 PM</div><div class="desc">Boat cruise & dinner at Pelican Pete's or Twisted Oar</div></div>
+              <div class="activity"><div class="time">9:30 PM</div><div class="desc">Final night celebration</div></div>
             </div>
           </div>
         </div>
-
         <div class="day" id="day4">
           <div class="day-header" onclick="toggleDay('day4')">
             <div class="day-header-left">
@@ -680,10 +681,8 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
     <div class="section" id="packing">
       <div class="section-header" onclick="toggle('packing')">
         <div class="section-title"><span class="icon">🎒</span> What to Bring</div>
@@ -695,7 +694,6 @@
         </div>
       </div>
     </div>
-
     <div class="section" id="cost">
       <div class="section-header" onclick="toggle('cost')">
         <div class="section-title"><span class="icon">💰</span> Cost Breakdown</div>
@@ -705,22 +703,19 @@
         <div class="cost-grid">
           <div class="cost-row"><span class="label">Sunrise Villa (3 nights)</span><span class="amount">$5,243</span></div>
           <div class="cost-row"><span class="label">÷ 16 people</span><span class="amount">$328 each</span></div>
-          <div class="cost-row optional"><span class="label">Golf<span class="optional-tag">OPTIONAL</span></span><span class="amount">$170–200</span></div>
+          <div class="cost-row optional"><span class="label">Golf — green fee<span class="locked-tag">CONFIRMED</span></span><span class="amount">$130</span></div>
           <div class="cost-row total"><span class="label">Your share (housing only)</span><span class="amount">~$328</span></div>
         </div>
-        <div class="cost-note">Final price depends on headcount. No payment needed yet — we'll sort it out in the group chat once we know who's in.</div>
+        <div class="cost-note">Final price depends on headcount. Golf is paid separately at the course on Saturday. No payment needed yet for housing — we'll sort it out in the group chat once we know who's in.</div>
       </div>
     </div>
-
   </div>
 </div>
-
 <div class="footer">
   <div class="emoji">🍻</div>
   <div class="tagline">Let's send Ryan off in style!</div>
   <p>Confirm in the group chat if you can make it</p>
 </div>
-
 <script>
 function toggle(id) {
   document.getElementById(id).classList.toggle('collapsed');
@@ -729,7 +724,5 @@ function toggleDay(id) {
   document.getElementById(id).classList.toggle('collapsed');
 }
 </script>
-
 </body>
 </html>
-New task - Claude
